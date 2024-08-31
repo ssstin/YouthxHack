@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Message Board - {% block title %}{% endblock title %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
@@ -13,6 +15,15 @@
   </header>
   <main>
     {% block content %}<p>No messages.</p>{% endblock content %}
+    <div class="container">
+      <!-- Background Image -->
+      <img src="{{ url_for('static', filename='image/tablet.png') }}" alt="Tablet" class="background-image">
+  
+      <!-- Overlay Image -->
+      <a href="/apps-page">
+          <img src="{{ url_for('static', filename='image/translate.png') }}" alt="logo" class="overlay-image">
+      </a>
+    </div>
   </main>
 </section>
 </body>

@@ -32,3 +32,31 @@
     width: 80%;
     margin: 0 auto;
   }
+
+/* Container for the background image and overlay image */
+.container {
+    position: relative;
+    display: inline-block; /* Ensures the container only takes up as much space as needed */
+}
+
+/* Background image (tablet or phone screen) */
+.background-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Overlay image that should cover the "Apps" section */
+.overlay-image {
+    position: absolute; /* Position relative to the container */
+    top: 59%;  /* Adjust this value to correctly position over the "Apps" section */
+    left: 15%; /* Adjust this value to correctly position over the "Apps" section */
+    width: 16%; /* Adjust width as needed */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Hover effect for the overlay image */
+.overlay-image:hover {
+    transform: scale(1.3);
+}
