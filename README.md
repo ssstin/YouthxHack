@@ -7,7 +7,7 @@ I-Translate is an innovative software solution developed to strengthen **Social 
 2. [Features](#features)
 3. [Installation](#installation)
 4. [Usage](#usage)
-5. [Acknowledgments](#acknowledgments)
+5. [Acknowledgments](#acknowledgements)
 
 ## Introduction
 
@@ -32,7 +32,7 @@ To run I-Translate locally, follow these steps:
 
 TBC
 
-## Acknowledgements
+## Acknowledgments
 
 - The Lions Befrienders Service Association for their support and inspiration.
 - Volunteers and community groups dedicated to bridging communication gaps in Singapore.
