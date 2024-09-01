@@ -20,9 +20,9 @@
       <img src="{{ url_for('static', filename='image/tablet.png') }}" alt="Tablet" class="background-image">
   
       <!-- Overlay Image -->
-      <a href="/apps-page">
-          <img src="{{ url_for('static', filename='image/translate.png') }}" alt="logo" class="overlay-image">
-      </a>
+      <a href="{{ url_for('pages.translate') }}">
+        <img src="{{ url_for('static', filename='image/translate.png') }}" alt="logo" class="overlay-image">
+    </a>    
     </div>
   </main>
 </section>
