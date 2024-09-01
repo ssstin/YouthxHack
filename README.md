@@ -23,7 +23,8 @@ In Singapore's multi-cultural society, **Social Defence** involves building trus
 - **Sign Language Generation**: Converts English text input from volunteers to animated sign language.
 
 ## Directory
-
+<pre>
+Directory
 │   .DS_Store
 │   .gitignore
 │   README.md
@@ -96,12 +97,7 @@ In Singapore's multi-cultural society, **Social Defence** involves building trus
     │   │           about.html
     │   │           home.html
     │   │           translate.html
-        
-
-            
-
-
-
+</pre>
 ## Installation
 
 To run I-Translate locally, follow these steps:
