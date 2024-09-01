@@ -64,8 +64,7 @@ In Singapore's multi-cultural society, **Social Defence** involves building trus
     │   │   │   │   point_history_classifier.py
     │   │   │   │   point_history_classifier.tflite
     │   │   │   │   point_history_classifier_label.csv
-    │   │   │   │   
-    │   │   │           
+    │   │   │   
     │   │   └───__pycache__
     │   │           __init__.cpython-311.pyc
     │   │           
@@ -96,7 +95,8 @@ In Singapore's multi-cultural society, **Social Defence** involves building trus
     │   │   └───pages
     │   │           about.html
     │   │           home.html
-    │   │           translate.html         
+    │   │           translate.html
+        
 
             
 
