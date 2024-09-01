@@ -22,6 +22,86 @@ In Singapore's multi-cultural society, **Social Defence** involves building trus
 - **Sign Language Detection**: Recognizes hand motions and translates them to English text.
 - **Sign Language Generation**: Converts English text input from volunteers to animated sign language.
 
+## Directory
+
+│   .DS_Store
+│   .gitignore
+│   README.md
+│   requirements.txt
+│   
+├───.vscode
+│       launch.json
+│       
+├───myenv
+└───src
+    │   .DS_Store
+    │   main.py
+    │   
+    ├───cv
+    │   │   app.py
+    │   │   keypoint_classification.ipynb
+    │   │   keypoint_classification_EN.ipynb
+    │   │   point_history_classification.ipynb
+    │   │   
+    │   ├───.ipynb_checkpoints
+    │   │       keypoint_classification-checkpoint.ipynb
+    │   │       keypoint_classification_EN-checkpoint.ipynb
+    │   │       
+    │   ├───model
+    │   │   │   __init__.py
+    │   │   │   
+    │   │   ├───keypoint_classifier
+    │   │   │   │   keypoint.csv
+    │   │   │   │   keypoint_classifier.hdf5
+    │   │   │   │   keypoint_classifier.keras
+    │   │   │   │   keypoint_classifier.py
+    │   │   │   │   keypoint_classifier.tflite
+    │   │   │   │   keypoint_classifier_label.csv
+    │   │   │           
+    │   │   ├───point_history_classifier
+    │   │   │   │   point_history.csv
+    │   │   │   │   point_history_classifier.hdf5
+    │   │   │   │   point_history_classifier.py
+    │   │   │   │   point_history_classifier.tflite
+    │   │   │   │   point_history_classifier_label.csv
+    │   │   │   │   
+    │   │   │           
+    │   │   └───__pycache__
+    │   │           __init__.cpython-311.pyc
+    │   │           
+    │   └───utils
+    │       │   cvfpscalc.py
+    │       │   __init__.py
+    │       │   
+    │       └───__pycache__
+    │               cvfpscalc.cpython-311.pyc
+    │               __init__.cpython-311.pyc
+    │               
+    ├───webpage
+    │   │   __init__.py
+    │   │   
+    │   ├───static
+    │   │   │   .DS_Store
+    │   │   │   styles.css
+    │   │   │   
+    │   │   └───image
+    │   │           microphone.png
+    │   │           tablet.png
+    │   │           translate.png
+    │   │           
+    │   ├───templates
+    │   │   │   base.html
+    │   │   │   _navigation.html
+    │   │   │   
+    │   │   └───pages
+    │   │           about.html
+    │   │           home.html
+    │   │           translate.html         
+
+            
+
+
+
 ## Installation
 
 To run I-Translate locally, follow these steps:
@@ -37,3 +117,4 @@ TBC
 - The Lions Befrienders Service Association for their support and inspiration.
 - Volunteers and community groups dedicated to bridging communication gaps in Singapore.
 - YouthxHack 2024 and Dell for providing the platform and motivation to create solutions for social good.
+- This project makes use of the pretrained model provided by [kinivi](https://github.com/kinivi) for hand gesture recognition, which is available on GitHub at [https://github.com/kinivi/hand-gesture-recognition-mediapipe](https://github.com/kinivi/hand-gesture-recognition-mediapipe).
