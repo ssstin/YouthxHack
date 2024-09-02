@@ -4,24 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>I-Connect</title>
 </head>
 <body>
     <div class="header-container">
-        <h2>IConnect</h2>
+        <h2>I-Connect</h2>
     </div>
     <main>
         <div class="translate-container">
-          <h3>Result</h3>
-          <!-- result text box -->
-          <div class="text-box result">
-            <p>Excuse me, Where can I find the nearest subway station?</p>
-          </div>
-          <h3>Input</h3>
-          <!-- input Text Box -->
-          <div class="text-box input">
+            <h3>Result</h3>
+            <!-- Result text box -->
+            <div class="text-box result">
+                <p>Excuse me, Where can I find the nearest subway station?</p>
+            </div>
+            <h3>Input</h3>
+            <!-- Input Text Box -->
+            <div class="text-box input">
+                <p>Xin lỗi, tôi có thể tìm ga tàu điện ngầm gần nhất ở đâu?</p>
+            </div>
+        </div>
 
-            <p>Xin lỗi, tôi có thể tìm ga tàu điện ngầm gần nhất ở đâu?</p>
-          </div>
+        <!-- Buttons for Translation Options -->
+        <div class="button-container">
+            <button type="button" class="translate-button" id="btn-canto-eng">Cantonese to English</button>
+            <button type="button" class="translate-button" id="btn-eng-canto">English to Cantonese</button>
+            <button type="button" class="translate-button" id="btn-sign-detect">Sign Language Detection</button>
         </div>
 
         <!-- Microphone Button -->
@@ -31,5 +38,70 @@
             </button>
         </div>
     </main>
+    <script>
+      // Boolean variable to track listening state
+        let isListening = false;
+
+        // Event listener for "English to Cantonese" button
+        document.getElementById('btn-eng-canto').addEventListener('click', function() {
+            if (!isListening) {
+                // Start listening
+                isListening = true;
+                document.getElementById('btn-eng-canto').textContent = 'Stop Listening';  // Change button text
+                startListening('english_to_cantonese');
+            } else {
+                // Stop listening
+                isListening = false;
+                document.getElementById('btn-eng-canto').textContent = 'English to Cantonese';  // Reset button text
+                stopListening();
+            }
+        });
+
+        // Event listener for "Cantonese to English" button
+        document.getElementById('btn-canto-eng').addEventListener('click', function() {
+            if (!isListening) {
+                // Start listening
+                isListening = true;
+                document.getElementById('btn-canto-eng').textContent = 'Stop Listening';  // Change button text
+                startListening('cantonese_to_english');
+            } else {
+                // Stop listening
+                isListening = false;
+                document.getElementById('btn-canto-eng').textContent = 'Cantonese to English';  // Reset button text
+                stopListening();
+            }
+        });
+
+        // Function to start listening
+        function startListening(translationType) {
+            fetch('/translate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({
+                    'type': translationType
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result) {
+                    document.querySelector('.text-box.result p').textContent = data.result;
+                } else {
+                    console.error(data.error);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        // Function to stop listening
+        function stopListening() {
+            // Here you can implement logic to stop the microphone listening process.
+            // If your backend supports stopping the listening, you can make a request to it.
+            console.log('Stopped listening.');
+        }
+
+  </script>
+  
 </body>
 </html>
