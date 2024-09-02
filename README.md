@@ -17,10 +17,8 @@ In Singapore's multi-cultural society, **Social Defence** involves building trus
 
 ## Features
 
-- **Speech-to-Text Translation**: Converts spoken dialects (Hokkien, Cantonese, Hakka) to English text.
-- **Text-to-Speech Translation**: Converts English text input from volunteers to spoken dialects.
-- **Sign Language Detection**: Recognizes hand motions and translates them to English text.
-- **Sign Language Generation**: Converts English text input from volunteers to animated sign language.
+- **Speech-to-Text Translation**: Converts spoken dialect (Cantonese) to English speech and vice versa.
+- **Sign Language Detection**: Recognises hand gestures and translates them to English text.
 
 ## Directory
 <pre>
