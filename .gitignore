@@ -132,4 +132,13 @@ dmypy.json
 *.bat
 .idea/
 
+# MacOS
 .DS_Store
+**/.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+
+myenv/
