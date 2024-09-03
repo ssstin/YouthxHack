@@ -33,6 +33,8 @@ Directory
 ├───myenv
 └───src
     │   main.py
+    |   can_to_eng.py
+    │   eng_to_can.py
     │   
     ├───cv
     │   │   app.py
@@ -92,6 +94,10 @@ Directory
     │   │           about.html
     │   │           home.html
     │   │           translate.html
+    ├───speech-to-speech
+    │       can_to_eng.py
+    │       eng_to_can.py
+    │       main.py
 </pre>
 ## Installation (MacOS)
 
