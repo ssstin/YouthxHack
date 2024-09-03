@@ -97,43 +97,39 @@ Directory
 
 To run i-Connect locally, follow these steps:
 
-1. Clone the repository into a directory of your choice, and navigate to its root directory.
-```ssh
-git clone https://github.com/ssstin/YouthxHack.git <repo_name>
+1. Clone the repo
 ```
-```ssh
-cd <repo_name>
+git clone https://github.com/ssstin/YouthxHack.git 
 ```
 
-2. Open the root directory of the repository using VSCode.
-```ssh
-code .
-```
+2. Create virtual environment
 
-3. Open a terminal in VSCode and create the virtual environment using Python.
-
+**mac**
 ```ssh
 python3 -m venv myenv
 ```
 
-4. Run the created environment.
+**windows**
+```
+python -m venv myenv
+```
+
+3. Activate virtual environment
+
+**mac**
 ```ssh
 source myenv/bin/activate
 ```
 
-5. Ensure that there are no dependencies in your environment by running this line. The output should be empty.
-```ssh
-pip freeze
+**windows**
+```
+source myenv/Scripts/activate
 ```
 
-6. Install the required dependencies for the application.
+
+4. Install the required libraries & dependancies 
 ```ssh
 pip install -r requirements.txt
-```
-
-7. Check that your environment now has only the dependencies specified in `requirements.txt`.
-```ssh
-pip freeze
 ```
 
 ## Usage 
