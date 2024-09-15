@@ -140,7 +140,7 @@ pip install -r requirements.txt
 
 ## Usage 
 
-1. Navigate to the `Run and Debug` tab in VSCode, select `Python Debugger (Flask)` and click the run button.
+`flask --app src/main.py run`
 
 ## Acknowledgements
 
