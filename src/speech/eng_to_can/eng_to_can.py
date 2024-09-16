@@ -29,7 +29,7 @@ class Eng_to_can(object):
 
         return engine
 
-    def SpeakText(command):
+    def speakText(command):
         """
         Function to convert text to speech.
 
@@ -68,7 +68,7 @@ class Eng_to_can(object):
                 print(f"Translated Text (Cantonese): {cantonese_translation}")
 
                 # Speak out the Cantonese translation
-                Eng_to_can.SpeakText(cantonese_translation)
+                Eng_to_can.speakText(cantonese_translation)
 
                 return recognized_text
 
